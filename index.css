@@ -44,7 +44,16 @@
 }
 
 .search{
+    font-size: 24px;
     padding: 10px;
+}
+
+.filter{
+    margin: 10px;
+}
+
+.filter-btn{
+margin-right: 10px;
 }
 
 .res-logo{
