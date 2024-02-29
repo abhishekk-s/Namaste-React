@@ -21,12 +21,12 @@ class UserClass extends React.Component {
     })
   }
   render() {
-    const {name,login} = this.state.userInfo;
+    const {name,login,url} = this.state.userInfo;
     return (
       <div className="user-card">
         <h2>Name : {name}</h2>
         <h2>Location : Kharagpur</h2>
-        <h2>Contact : @{login}</h2>
+        <h2>Contact : @{login} : {url}</h2>
       </div>
     );
   }
