@@ -9,19 +9,19 @@ export const Header = () => {
   const onlineStatus= useOnlineStatus();
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-slate-200">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+        <img className="w-[12rem]" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li>Cart</li>
+      <div className="flex items-cente">
+        <ul className="flex p-4 m-4 items-center">
+          <li className="px-4">Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="px-4"><Link to="/">Home</Link></li>
+          <li className="px-4"><Link to="/about">About</Link></li>
+          <li className="px-4"><Link to="/contact">Contact Us</Link></li>
+          <li className="px-4">Cart</li>
           <button
-            className="login"
+            className="px-4 py-1 bg-blue-300 m-4 rounded-md"
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}

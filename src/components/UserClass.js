@@ -6,8 +6,8 @@ class UserClass extends React.Component {
     super(props);
     this.state = {
       userInfo: {
-        name: "A",
-        login: "A",
+        name: "",
+        login: "",
       },
     };
   }
@@ -23,7 +23,7 @@ class UserClass extends React.Component {
   render() {
     const {name,login,url} = this.state.userInfo;
     return (
-      <div className="user-card">
+      <div className="user-card m-4 p-4 bg-gray-100">
         <h2>Name : {name}</h2>
         <h2>Location : Kharagpur</h2>
         <h2>Contact : @{login} : {url}</h2>
