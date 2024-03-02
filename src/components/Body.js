@@ -1,9 +1,11 @@
-import RestCard from "./RestCard";
-import { useState, useEffect } from "react";
+import RestCard, { withPromotedLabel } from "./RestCard";
+import { useState, useEffect, useContext } from "react";
 import { SWIGGY_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { withPromotedLabel } from "./RestCard";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -32,6 +34,9 @@ const Body = () => {
         <h1>Please check your internet connection.</h1>
       </div>
     );
+
+  const PromotedRestCard = withPromotedLabel(RestCard);
+  const { loggedInUser, setUser } = useContext(UserContext);
 
   return filteredRestaurant.length === 0 ? (
     <Shimmer />
@@ -82,11 +87,21 @@ const Body = () => {
             All Restaurants
           </button>
         </div>
+        <label>UserName :</label>
+        <input
+          className="border border-black p-2"
+          value={loggedInUser}
+          onChange={(e) => setUser(e.target.value)}
+        />
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurant.map((res) => (
           <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
-            <RestCard resData={res} />
+            {res.info.veg ? (
+              <PromotedRestCard resData={res} />
+            ) : (
+              <RestCard resData={res} />
+            )}
           </Link>
         ))}
       </div>
