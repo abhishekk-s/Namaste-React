@@ -6,6 +6,7 @@ import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   const { restId } = useParams();
+  const [showIndex, setShowIndex] = useState(0);
 
   const resInfo = useRestaurantMenu(restId);
 
@@ -19,9 +20,7 @@ const RestaurantMenu = () => {
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
-  const [showIndex, setShowIndex] = useState(0);
-
+  const showItem = true;
   return (
     <div className="text-center">
       <h1 className="font-bold text-2xl my-6 bg-slate-200">{name}</h1>
@@ -35,7 +34,7 @@ const RestaurantMenu = () => {
         <RestaurantCategory
           key={category?.card?.card.title}
           data={category?.card?.card}
-          showItems={index === 0 ? true : false}
+          showItems={index === showIndex ? true : false}
           setShowIndex={() => setShowIndex(index)}
         />
       ))}

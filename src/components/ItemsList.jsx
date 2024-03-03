@@ -20,13 +20,15 @@ const ItemsList = ({ items }) => {
             <p className="py-6 text-sm">{item?.card?.info?.description}</p>
           </div>
           <div className="w-3/12 p-4">
-          <div className="absolute">
+            <div className="absolute">
               <button className="mx-8 my-28 px-6 bg-green-400 shadow-lg rounded-md p-2">
                 Add
               </button>
             </div>
-            <img src={CDN_URL + item?.card?.info?.imageId} className="w-100px" />
-            
+            <img
+              src={CDN_URL + item?.card?.info?.imageId}
+              className="w-100px"
+            />
           </div>
         </div>
       ))}

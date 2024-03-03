@@ -12,14 +12,13 @@ import UserContext from "./utils/UserContext";
 const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
-  const [user , setUser] = useState();
-  setUser("AK");
+  const [user, setUser] = useState("AK");
   return (
-    <UserContext.Provider value={{loggenInUser:user , setUser}}>
-    <div className="app">
-      <Header></Header>
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggenInUser: user, setUser }}>
+      <div className="app">
+        <Header></Header>
+        <Outlet />
+      </div>
     </UserContext.Provider>
   );
 };

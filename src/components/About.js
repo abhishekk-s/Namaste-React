@@ -9,7 +9,7 @@ class About extends React.Component {
       <div className="m-4">
         <h1 className="font-bold px-4">About Us</h1>
         <UserContext.Consumer>
-          {({loggedInUser}) => <h3>{loggedInUser}</h3>}
+          {({ loggenInUser }) => <h3 className="m-4">USER : {loggenInUser}</h3>}
         </UserContext.Consumer>
         <UserClass name={"AKS"} />
       </div>

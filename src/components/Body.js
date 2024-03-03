@@ -11,6 +11,9 @@ const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState();
+  const { loggedInUser, setUser } = useContext(UserContext);
+
+  const PromotedRestCard = withPromotedLabel(RestCard);
 
   useEffect(() => {
     fetchData();
@@ -35,8 +38,7 @@ const Body = () => {
       </div>
     );
 
-  const PromotedRestCard = withPromotedLabel(RestCard);
-  const { loggedInUser, setUser } = useContext(UserContext);
+  console.log(filteredRestaurant.length);
 
   return filteredRestaurant.length === 0 ? (
     <Shimmer />
@@ -46,7 +48,7 @@ const Body = () => {
         <div className="search p-4 m-4">
           <input
             type="text"
-            className="border border-solid border-black"
+            className="border border-solid border-black px-2"
             value={searchText}
             onChange={(x) => setSearchText(x.target.value)}
           />
@@ -87,9 +89,9 @@ const Body = () => {
             All Restaurants
           </button>
         </div>
-        <label>UserName :</label>
+        <label className="px-2 font-semibold">UserName :</label>
         <input
-          className="border border-black p-2"
+          className="border border-solid border-black p-0.5"
           value={loggedInUser}
           onChange={(e) => setUser(e.target.value)}
         />
