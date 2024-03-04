@@ -4,7 +4,6 @@ import { SWIGGY_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import { withPromotedLabel } from "./RestCard";
 import UserContext from "../utils/UserContext";
 
 const Body = () => {
