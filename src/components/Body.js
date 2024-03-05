@@ -37,8 +37,6 @@ const Body = () => {
       </div>
     );
 
-  console.log(filteredRestaurant.length);
-
   return filteredRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
@@ -47,6 +45,7 @@ const Body = () => {
         <div className="search p-4 m-4">
           <input
             type="text"
+            data-testid="searchInput"
             className="border border-solid border-black px-2"
             value={searchText}
             onChange={(x) => setSearchText(x.target.value)}

@@ -1,0 +1,73 @@
+{
+    "info": {
+        "id": "34634",
+        "name": "Shah Ghouse Hotel & Restaurant",
+        "cloudinaryImageId": "ks4d93rjtcbitkzkbqx0",
+        "locality": "Tolichowki",
+        "areaName": "Tolichowki",
+        "costForTwo": "₹350 for two",
+        "cuisines": [
+            "Biryani",
+            "North Indian",
+            "Chinese",
+            "Mughlai",
+            "Tandoor"
+        ],
+        "avgRating": 4.3,
+        "parentId": "19271",
+        "avgRatingString": "4.3",
+        "totalRatingsString": "10K+",
+        "sla": {
+            "deliveryTime": 43,
+            "lastMileTravel": 5.6,
+            "serviceability": "SERVICEABLE",
+            "slaString": "40-45 mins",
+            "lastMileTravelString": "5.6 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-03-05 23:59:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "20% OFF",
+            "subHeader": "UPTO ₹50"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-55da8c65-2216-4b33-b5ae-40381c262ff4"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/shah-ghouse-hotel-and-restaurant-tolichowki-hyderabad-34634",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

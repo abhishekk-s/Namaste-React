@@ -14,7 +14,6 @@ const RestaurantCategory = (props) => {
   const { showItems, setShowIndex } = props;
   const handleClick = () => {
     setShowIndex();
-    console.log(showItems);
   };
 
   return (
@@ -24,7 +23,7 @@ const RestaurantCategory = (props) => {
           className=" flex justify-between cursor-pointer"
           onClick={handleClick}
         >
-          <span className="font-semibold text-lg">{title}</span>
+          <span className="font-semibold text-lg">{title}({itemCards.length})</span>
           <span className="font-semibold text-lg">⏬</span>
         </div>
         {showItems && <ItemsList items={itemCards}></ItemsList>}
